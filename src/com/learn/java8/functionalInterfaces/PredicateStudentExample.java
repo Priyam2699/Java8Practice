@@ -35,11 +35,9 @@ public class PredicateStudentExample {
 		});
 
 	}
-	
-	
-	public static void filterStudents()
-	{
-		
+
+	public static void filterStudents() {
+
 		List<Student> studentList = StudentDataBase.getAllStudents();
 
 		studentList.forEach(student -> {
@@ -49,14 +47,14 @@ public class PredicateStudentExample {
 			}
 
 		});
-		
+
 	}
 
 	public static void main(String[] args) {
 
-		//filterStudentByGradeLevel();
-		//filterStudentByGPA();
-		
+		// filterStudentByGradeLevel();
+		// filterStudentByGPA();
+
 		filterStudents();
 
 	}
