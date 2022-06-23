@@ -1,6 +1,5 @@
 package com.learn.java8.streams;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -19,6 +18,12 @@ public class StreamsMinMaxExample {
 
 	}
 
+	public static Optional<Integer> findMinValueOptional(List<Integer> integerList) {
+
+		return integerList.stream().reduce((x, y) -> x < y ? x : y);
+
+	}
+
 	public static void main(String[] args) {
 
 		List<Integer> inteList = Arrays.asList(6, 7, 8, 9);
@@ -28,6 +33,10 @@ public class StreamsMinMaxExample {
 		int max = findMaxValue(inteList);
 
 		System.out.println("max value is :" + max);
+
+		Optional<Integer> min = findMinValueOptional(inteList);
+
+		System.out.println("min value using optional is " + min.get());
 
 		Optional<Integer> findMaxValueOptional = findMaxValueOptional(inteList);
 
