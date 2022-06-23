@@ -1,6 +1,6 @@
 package com.learn.java8.lambdas;
 
-public class RunnableLambdaExample {
+public class RunnableLambdaExample  {
 
 	public static void main(String[] args) {
 
