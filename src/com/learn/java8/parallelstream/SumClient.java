@@ -12,6 +12,7 @@ public class SumClient {
 
 		System.out.println(sum.getTotal());
 
+		/// never to use parallel if using mutable variable
 	}
 
 }
