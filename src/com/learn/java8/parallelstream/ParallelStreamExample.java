@@ -18,6 +18,7 @@ public class ParallelStreamExample {
 
 		System.out.println(sum_Sequential_Stream());
 		System.out.println(sum_parallel_Stream());
+		System.out.println(Runtime.getRuntime().availableProcessors());
 
 	}
 
