@@ -10,14 +10,22 @@ import com.learn.java8.functionalInterfaces.StudentDataBase;
 public class DefaultsMethodsExample2 {
 
 	static Consumer<Student> s = (s) -> System.out.println(s);
+	static Comparator<Student> nameComparator = Comparator.comparing(Student::getGradeLevel);
 
 	public static void sortByName(List<Student> studentList) {
-
-		Comparator<Student> nameComparator = Comparator.comparing(Student::getGradeLevel);
 
 		studentList.sort(nameComparator);
 
 		studentList.forEach(s);
+	}
+
+	public static void sortWithNullValues(List<Student> students) {
+
+		Comparator<Student> nullsFirst = Comparator.nullsLast(nameComparator);
+
+		students.sort(nullsFirst);
+		students.forEach(s);
+
 	}
 
 	public static void main(String[] args) {
@@ -28,7 +36,9 @@ public class DefaultsMethodsExample2 {
 
 		// allStudents.forEach(s);
 
-		sortByName(allStudents);
+		// sortByName(allStudents);
+
+		sortWithNullValues(allStudents);
 
 	}
 
